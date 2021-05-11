@@ -5,6 +5,10 @@ document.addEventListener("keydown", addNewInputWithEnter);
 
 function addNewInputWithEnter(event) {
     if (event.keyCode === 13) {
+
+        var form = document.querySelector("form");
+        form.style.display = "inline-flex";
+
         var textInput = document.createElement('input');
         textInput.setAttribute('type', 'text');
 
@@ -31,6 +35,7 @@ function addNewInputWithEnter(event) {
 
         var section = document.querySelector('section');
         section.appendChild(div);
+
     }
 }
 
@@ -42,6 +47,12 @@ function addNewInputWithEnter(event) {
 // // addNewInput();
 
 // function addNewInput() {
+
+//     var form = document.querySelector("form");
+//     form.style.border = "solid red";
+//     form.style.display = "inline-flex";
+//     form.style.padding = 10 + "px";
+
 //     var textInput = document.createElement('input');
 //     textInput.setAttribute('type', 'text');
 
@@ -92,3 +103,5 @@ function calculateTotal(event) {
 function deleteRow(event) {
     event.target.parentNode.remove();
 }
+
+
